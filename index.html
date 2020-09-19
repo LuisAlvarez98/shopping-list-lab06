@@ -21,14 +21,15 @@
   $("button").on("click", (e) => {
     e.preventDefault();
     let name = $("#inputButtonName").val();
-
-    $(".list").append(`
+    if (name != "") {
+      $(".list").append(`
      <div class="element-container">
           <h3 class="hh3"">${name}</h3>
           <button id="btnCheck">Check</button>
           <button id="btnDelete">Delete</button>
      </div>
     `);
+    }
   });
   /*
     Method used for checking and unchecking the h3 element
