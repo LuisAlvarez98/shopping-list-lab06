@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shopping List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Shopping List</h1>
+      <form>
+        <label> Add an item </label>
+        <input type="text" placeholder="e.g., broccoli" id="inputButtonName" />
+        <button type="submit">Add item</button>
+      </form>
+      <ul class="list"></ul>
+    </div>
+  </body>
+</html>
+<script>
+  $("button").on("click", (e) => {
+    e.preventDefault();
+    let name = $("#inputButtonName").val();
+
+    $(".list").append(`
+     <div class="element-container">
+          <h3 class="hh3"">${name}</h3>
+          <button id="btnCheck">Check</button>
+          <button id="btnDelete">Delete</button>
+     </div>
+    `);
+  });
+  /*
+    Method used for checking and unchecking the h3 element
+  */
+  $(".list").on("click", "#btnCheck", function () {
+    $(this).parent().find("h3").toggleClass("dash");
+  });
+
+  /*
+    Method used for removing elements
+  */
+  $(".list").on("click", "#btnDelete", function () {
+    $(this).parent().remove();
+  });
+</script>

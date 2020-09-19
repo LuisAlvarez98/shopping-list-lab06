@@ -1,0 +1,50 @@
+.dash {
+  text-decoration: line-through;
+}
+.element-container {
+  border: 2px solid gray;
+  padding: 16px;
+  margin: 16px;
+}
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+#btnCheck {
+  background-color: #4caf50; /* Green */
+  border: 2px solid black;
+  border-radius: 32px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  outline-width: 0;
+}
+#btnCheck:hover {
+  background-color: #fff; /* Green */
+  color: #000;
+  outline-width: 0;
+}
+
+#btnDelete {
+  background-color: red; /* Green */
+  border: 2px solid black;
+  border-radius: 32px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  outline-width: 0;
+}
+
+#btnDelete:hover {
+  background-color: #fff; /* Green */
+  color: #000;
+  outline-width: 0;
+}
